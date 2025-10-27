@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:18.0
+    container_name: postgres
+    volumes:
+      - postgresql_data:/var/lib/postgresql
+    env_file:
+      - .env
+    ports:
+      - "6432:5432"
+    networks:
+      - postgres_network
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    depends_on:
+      - postgres
+    ports:
+      - "9100:3000"
+    networks:
+      - postgres_network
+
+volumes:
+  postgresql_data:
+    driver: local
+
+networks:
+  postgres_network:
+    driver: bridge
