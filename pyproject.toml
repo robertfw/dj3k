@@ -1,0 +1,92 @@
+[project]
+name = "dj3k"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "ruff>=0.14.2",
+]
+
+[tool.ruff]
+target-version = "py314"
+
+[tool.ruff.lint]
+preview = true
+select = [
+    "YTT",
+    "ANN",
+    "ASYNC",
+    "S",
+    "BLE",
+    "FBT",
+    "B",
+    "A",
+    "COM",
+    "C4",
+    "DTZ",
+    "T10",
+    "DJ",
+    "EM",
+    "EXE",
+    "FIX001",
+    "INT",
+    "ISC",
+    "ICN",
+    "LOG",
+    "G",
+    "INP",
+    "PIE",
+    "T20",
+    "PYI",
+    "PT",
+    "Q",
+    "RSE",
+    "RET",
+    "SLF",
+    "SIM",
+    "SLOT",
+    "TID",
+    "TD",
+    "PTH",
+    "FLY",
+    "I",
+    "C90",
+    "NPY",
+    "PD",
+    "N",
+    "PERF",
+    "E",
+    "W",
+    "DOC202",
+    "DOC403",
+    "DOC502",
+    "D200",
+    "D206",
+    "D208",
+    "D209",
+    "D210",
+    "D300",
+    "D301",
+    "D402",
+    "D404",
+    "D419",
+    "F",
+    "PL",
+    "UP",
+    "FURB",
+    "RUF",
+    "TRY"
+]
+
+exclude = [
+    "TD002",
+    "TD003",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
